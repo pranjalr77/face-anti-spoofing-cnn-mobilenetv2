@@ -108,8 +108,8 @@ The original paper uses eye blinking and lip movement detection on an Android ap
 
 face-anti-spoofing-cnn-mobilenetv2/
 │
-├── Paper - Improved Facial Biometric Authentication Using MobileNetV2  
-├── Paper - Face Anti-Spoofing Using CNN Classifier and Face liveness Detection.ipynb  
+├── mobilenetv2_antispoofing.ipynb 
+├── cnn_liveness_detection.ipynb  
 └── README.md
 
 ---
