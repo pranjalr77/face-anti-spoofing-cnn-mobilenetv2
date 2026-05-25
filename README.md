@@ -108,8 +108,8 @@ The original paper uses eye blinking and lip movement detection on an Android ap
 
 face-anti-spoofing-cnn-mobilenetv2/
 │
-├── Paper - Improved Facial Biometric Authentication Using MobileNetV2        # Paper 1: MobileNetV2 Transfer Learning
-├── Paper - Face Anti-Spoofing Using CNN Classifier and Face liveness Detection.ipynb        # Paper 2: CNN + Liveness Detection Pipeline
+├── Paper - Improved Facial Biometric Authentication Using MobileNetV2  
+├── Paper - Face Anti-Spoofing Using CNN Classifier and Face liveness Detection.ipynb  
 └── README.md
 
 ---
@@ -118,7 +118,7 @@ face-anti-spoofing-cnn-mobilenetv2/
 
 1. Clone this repository
 2. Download the NUAA dataset
-3. Update the `dataset_root` path in both notebooks to your local dataset path
+3. Update the dataset_root path in both notebooks to your local dataset path
 4. Install dependencies: pip install tensorflow opencv-python scikit-learn numpy matplotlib
 5. Run each notebook end-to-end in Jupyter
 
