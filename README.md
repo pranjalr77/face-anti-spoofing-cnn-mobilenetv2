@@ -22,6 +22,12 @@ A comparative research study reproducing and evaluating two published face anti-
 - Binary classification: real (genuine faces) vs fake (spoofed/printed faces)
 - Prepared from raw split text files: client_train_raw.txt, client_test_raw.txt, imposter_train_raw.txt, imposter_test_raw.txt
 - Split into train/ and test/ directories with real/ and fake/ subfolders
+  
+| Split | Real | Fake | Total |
+|---|---|---|---|
+| Train (70%) | 1,743 | 1,748 | 3,491 |
+| Validation (30%) | — | — | 1,046 |
+| Test | 3,362 | 5,761 | 9,123 |
 
 > Dataset not included in this repository. Download from the official NUAA dataset source.
 
@@ -35,6 +41,8 @@ A comparative research study reproducing and evaluating two published face anti-
 - Base: MobileNetV2 pretrained on ImageNet (include_top=False)
 - Head: GlobalAveragePooling2D → Dropout(0.30) → Dense(1, sigmoid)
 - Input size: 224×224
+
+**Model Size:** Total params: 2,259,265 (8.62 MB) | Trainable (Stage 1): 1,281
 
 **Training Pipeline:**
 - **Stage 1 — Feature Extraction:** Base model frozen, only classification head trained
@@ -52,9 +60,11 @@ A comparative research study reproducing and evaluating two published face anti-
 ### Paper 2 — Sequential CNN + Liveness Detection (Paper - Face Anti-Spoofing Using CNN Classifier and Face liveness Detection)
 
 **Architecture:**
-- Custom CNN: Conv2D(32) → BN → MaxPool → Conv2D(64) → BN → MaxPool → Conv2D(128) → BN → MaxPool → Dense(256) → Dropout(0.5) → Dense(1, sigmoid)
+- Custom CNN: Conv2D(32) → Batch Norm → MaxPool → Conv2D(64) → Batch Norm → MaxPool → Conv2D(128) → Batch Norm → MaxPool → Dense(256) → Dropout(0.5) → Dense(1, sigmoid)
 - Input size: 128×128
 - Optimizer: Adam | Loss: Binary Crossentropy | Epochs: 20 | Batch size: 32
+
+**Model Size:** Total params: 6,517,185 (24.86 MB) | Trainable: 6,516,737
 
 **Two-Stage Anti-Spoofing Pipeline:**
 - **Stage 1 — Liveness Module:**
@@ -75,7 +85,7 @@ The original paper uses eye blinking and lip movement detection on an Android ap
 
 ## Tech Stack
 - Python 3.11
-- TensorFlow / Keras
+- TensorFlow 2.20 / Keras
 - OpenCV (cv2)
 - scikit-learn
 - NumPy, Matplotlib
