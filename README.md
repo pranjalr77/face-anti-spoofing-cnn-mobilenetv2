@@ -122,5 +122,5 @@ face-anti-spoofing-cnn-mobilenetv2/
 4. Install dependencies: pip install tensorflow opencv-python scikit-learn numpy matplotlib
 5. Run each notebook end-to-end in Jupyter
 
----
+
 
