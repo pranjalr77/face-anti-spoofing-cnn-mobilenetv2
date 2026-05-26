@@ -107,9 +107,11 @@ The original paper uses eye blinking and lip movement detection on an Android ap
 ## Project Structure
 
 face-anti-spoofing-cnn-mobilenetv2/
-│
-├── mobilenetv2_antispoofing.ipynb 
-├── cnn_liveness_detection.ipynb  
+
+└── mobilenetv2_antispoofing.ipynb 
+
+└── cnn_liveness_detection.ipynb  
+
 └── README.md
 
 ---
