@@ -118,7 +118,7 @@ face-anti-spoofing-cnn-mobilenetv2/
 
 ## How to Run
 
-1. Clone this repository
+1. Download the two ipynb files
 2. Download the NUAA dataset
 3. Update the dataset_root path in both notebooks to your local dataset path
 4. Install dependencies: pip install tensorflow opencv-python scikit-learn numpy matplotlib
