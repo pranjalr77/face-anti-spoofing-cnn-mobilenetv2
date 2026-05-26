@@ -124,6 +124,3 @@ face-anti-spoofing-cnn-mobilenetv2/
 
 ---
 
-## Author
-**Pranjal Rathod**
-M.Tech Computer Science & Engineering | Sardar Vallabhai National Institue of Technology
